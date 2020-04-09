@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitfun() {
+            alert("静态注册表单提交事件发现不合法")
+            return false;
+        }
+        window.onload = function () {
+            var form01obj = document.getElementById("form01")
+            alert(form01obj);
+            form01obj.onsubmit = function () {
+                alert("");
+                return true;
+            }
+        }
+    </script>
+
+
+</head>
+<body>
+<form action="http://localhost:8088"id="form01">
+<input type="submit"value="静态注册"/>
+</form>
+</body>
+</html>
